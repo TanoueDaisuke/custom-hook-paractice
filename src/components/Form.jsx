@@ -12,25 +12,13 @@ const Form = () => {
       <h2>Form App</h2>
       <form>
         name: 
-        <input
-          type={nameField.type}
-          value={nameField.value}
-          onChange={nameField.onChange} 
-        /> 
+        <input { ...nameField } /> 
         <br/> 
         birthdate:
-        <input
-          type={dateField.type}
-          value={dateField.value}
-          onChange={dateField.onChange} 
-        />
+        <input { ...dateField }/>
         <br /> 
         height:
-        <input
-          type={numberField.type}
-          value={numberField.value}
-          onChange={numberField.onChange} 
-        />
+        <input { ...numberField }/>
       </form>
       <div>
         {nameField.value} {dateField.value} {numberField.value} 
